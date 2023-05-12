@@ -2,16 +2,35 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>ProjectName</title>
+    <title>Vendor Order Tracker</title>
     <link 
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
       rel="stylesheet" 
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
       crossorigin="anonymous">
-    <link rel="stylesheet" href="~/css/styles.css">
+    <link rel="stylesheet" href="~/css/style.css">
   </head>
   <body>
-    @RenderBody()
-    @await Html.PartialAsync("Footer")
+
+    <header>
+      <h1>Vendor Order Tracker</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/vendors">Vendors</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="container">
+        @RenderBody()
+      </div>
+    </main>
+
+    <footer>
+      @await Html.PartialAsync("Footer")
+    </footer>
   </body>
 </html>
