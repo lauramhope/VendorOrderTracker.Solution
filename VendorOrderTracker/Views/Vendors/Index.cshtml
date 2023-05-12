@@ -4,7 +4,7 @@
 
 @using VendorOrderTracker.Models;
 
-<h1>Vendors List:</h1>
+<h1>Vendor List:</h1>
 
 @if (@Model.Count == 0)
 {
@@ -13,7 +13,7 @@
 
 @foreach (Vendor vendor in Model)
 {
-  <h3><a href='/vendors/@vendor.Id'>Vendor Name: @vendor.VendorName, Vendor Description: @vendor.VendorDescription</a></h3>
+  <h3><a href='/vendors/@vendor.Id'>@vendor.VendorName</a></h3>
 }
 
 <p><a href='/'>Back home</a></p>
