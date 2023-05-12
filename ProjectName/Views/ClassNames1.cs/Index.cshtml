@@ -1,0 +1,19 @@
+@* @{
+  Layout = "_Layout";
+}
+
+@using ProjectName.Models;
+
+<h1>ClassNames1</h1>
+
+@if (@Model.Count == 0)
+{
+  <h3>No classNames1 have been added yet!</h3>
+} 
+
+@foreach (ClassNames1 classNames1 in Model)
+{
+  <h3><a href='/classNames1/@className1.Id'>@classNames1.Name</a></h3>
+}
+
+<p><a href='/'>Back home</a></p> *@
