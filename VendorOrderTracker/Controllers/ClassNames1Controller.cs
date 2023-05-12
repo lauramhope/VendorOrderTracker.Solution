@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System;
 using Microsoft.AspNetCore.Mvc;
-using ProjectName.Models;
+using VendorOrderTracker.Models;
 
-namespace ProjectName.Controllers
+namespace VendorOrderTracker.Controllers
 {
   public class ClassNames1Controller : Controller
   {
