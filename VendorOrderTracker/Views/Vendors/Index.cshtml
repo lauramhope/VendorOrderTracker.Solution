@@ -11,16 +11,17 @@
   <h3>No vendors have been added yet!</h3>
 } 
 
-<ul>
-  @foreach (Vendor vendor in Model)
-    {
-      <li><a href='/vendors/@vendor.Id'>@vendor.VendorName</a></li>
-    }
-</ul>
-<a href='/vendors/new'>Add a new vendor</a>
+@foreach (Vendor vendor in Model)
+{
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">@vendor.VendorName</h4>
+      <p class="card-text">@vendor.VendorDescription</p>
+      <a href='/vendors/@vendor.Id' class="btn btn-primary">View Vendor</a>
+    </div>
+  </div>
+}
 
-<form action="/vendors/delete" method="post">
-      <button type="submit" name="button">Clear Vendors</button>
-</form>
+<a href='/vendors/new'>Add a new vendor</a>
 
 <p><a href='/'>Back home</a></p>

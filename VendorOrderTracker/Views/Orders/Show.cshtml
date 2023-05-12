@@ -5,6 +5,8 @@
 <h1>Vendor Order Tracker: Order Details: </h1>
 
 <h2>@Model["order"].Description</h2>
+<h3>Price: @Model["order"].Price</h3>
+<h3>Date: @Model["order"].Date</h3>
 <h3>Vendor: @Model["vendor"].VendorName</h3>
 
 <a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a>
