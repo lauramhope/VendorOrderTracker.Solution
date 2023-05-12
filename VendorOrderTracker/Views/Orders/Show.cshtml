@@ -2,12 +2,13 @@
   Layout = "_Layout";
 }
 
-<h1>Vendor Order Tracker: Order Details: </h1>
+<h1>Order Details:</h1>
 
-<h2>@Model["order"].Description</h2>
-<h3>Price: @Model["order"].Price</h3>
-<h3>Date: @Model["order"].Date</h3>
-<h3>Vendor: @Model["vendor"].VendorName</h3>
+<h4><u>@Model["order"].Description</u></h4>
+<li>Price: @Model["order"].Price</li>
+<li>Date: @Model["order"].Date</li>
+<li>Vendor: @Model["vendor"].VendorName</li>
 
 <a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a>
+<br>
 <a href='/vendors'>View all vendors</a>

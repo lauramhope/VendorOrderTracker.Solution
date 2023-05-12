@@ -13,24 +13,20 @@
   <body>
 
     <header>
-      <h1>Vendor Order Tracker</h1>
-    </header>
-
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/vendors">Vendors</a></li>
-      </ul>
-    </nav>
-
+      <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container">
+          <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Vendor / Order Tracker</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                  aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
     <main>
       <div class="container">
         @RenderBody()
       </div>
     </main>
 
-    <footer>
-      @await Html.PartialAsync("Footer")
-    </footer>
   </body>
 </html>
