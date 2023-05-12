@@ -16,7 +16,7 @@ namespace VendorOrderTracker.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("Test Title", "Test Description");
+      Order newOrder = new Order("Test Title", "Test Description", 1, "Test Date");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
@@ -26,7 +26,9 @@ namespace VendorOrderTracker.Tests
     {
       string title = "Test Title";
       string description = "Test Description";
-      Order newOrder = new Order(title, description);
+      int price = 1;
+      string date = "Test Date";
+      Order newOrder = new Order(title, description, price, date);
       string resultTitle = newOrder.Title;
       string resultDescription = newOrder.Description;
       Assert.AreEqual(title, resultTitle);
@@ -38,7 +40,9 @@ namespace VendorOrderTracker.Tests
     {
       string title = "Test Title";
       string description = "Test Description";
-      Order newOrder = new Order(title, description);
+      int price = 1;
+      string date = "Test Date";
+      Order newOrder = new Order(title, description, price, date);
       string updatedTitle = "Updated Title";
       string updatedDescription = "Updated Description";
       newOrder.Title = updatedTitle;
@@ -64,8 +68,12 @@ namespace VendorOrderTracker.Tests
       string title02 = "Test Title 2";
       string description01 = "Test Description 1";
       string description02 = "Test Description 2";
-      Order newOrder1 = new Order(title01, description01);
-      Order newOrder2 = new Order(title02, description02);
+      int price01 = 1;
+      int price02 = 2;
+      string date01 = "Test Date 1";
+      string date02 = "Test Date 2";
+      Order newOrder1 = new Order(title01, description01, price01, date01);
+      Order newOrder2 = new Order(title02, description02, price02, date02);
       List<Order> newList = new List<Order> { newOrder1, newOrder2 };
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newList, result);
