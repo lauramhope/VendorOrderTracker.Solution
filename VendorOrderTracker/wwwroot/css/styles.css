@@ -18,7 +18,6 @@ body {
 main {
   padding: 20px 0;
   flex: 1;
-	background-image: url("bread.jpg");
 }
 
 main::after {
